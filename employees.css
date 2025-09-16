@@ -1,0 +1,297 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fa;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+h3, h2 {
+  text-align: center;
+  color: #333;
+}
+.header{
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    width: fit-content;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+form input, form select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form label {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+form button {
+  padding: 10px 15px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #45a049;
+}
+
+.search-section {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.search-section input {
+  width: 50%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#export-btn {
+  padding: 8px 15px;
+  margin-left: 10px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#export-btn:hover {
+  background: #2980b9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+table th {
+  background: #f4f4f4;
+  cursor: pointer;
+}
+
+table img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Action Buttons */
+.action-btn {
+  padding: 5px 10px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.view-btn {
+  background: #3498db;
+}
+
+.update-btn {
+  background: #f39c12;
+}
+
+.delete-btn {
+  background: #e74c3c;
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  text-align: center;
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat();
+  height: fit-content;
+
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.modal-content img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Mobile Phones (Max Width: 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+    width: 100%;
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Form fields stack vertically */
+  .form-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  form input, form select, form button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* Search input full width */
+  .search-section input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #export-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* Table - Make scrollable */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  table th, table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  /* Modal full width */
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .modal-content img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Tablets (481px - 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .form-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form input, form select, form button {
+    font-size: 15px;
+  }
+
+  /* Search Section */
+  .search-section input {
+    width: 70%;
+  }
+
+  #export-btn {
+    padding: 10px;
+  }
+
+  /* Table */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  table th, table td {
+    font-size: 14px;
+  }
+
+  /* Modal width */
+  .modal-content {
+    width: 80%;
+  }
+}
+
+/* Small Laptops (769px - 1024px) */
+@media (max-width: 1024px) {
+  .form-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  form input, form select {
+    flex: 1 1 48%;
+  }
+
+  .modal-content {
+    width: 70%;
+  }
+}
